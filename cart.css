@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    padding: 40px 36px 32px 36px;
+}
+
+h2 {
+    text-align: center;
+    color: #2d3e50;
+    margin-bottom: 32px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 28px;
+    background: #f7faff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    font-size: 1.1em;
+    color: #333;
+}
+
+th, td {
+    padding: 16px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e0eafc;
+    font-size: 1.07em;
+}
+
+th {
+    background: #e0eafc;
+    color: #2d3e50;
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.edit-btn, .cart-container button[type="submit"] {
+    background: linear-gradient(90deg, #007bff 0%, #28a745 100%);
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.edit-btn:hover, .cart-container button[type="submit"]:hover {
+    background: linear-gradient(90deg, #0056b3 0%, #218838 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.edit-btn[style*="background:#dc3545;"] {
+    background: linear-gradient(90deg, #dc3545 0%, #ff7675 100%) !important;
+}
+
+.edit-btn[style*="background:#dc3545;"]:hover {
+    background: linear-gradient(90deg, #b71c1c 0%, #ff7675 100%) !important;
+}
+
+.edit-btn[style*="background:#28a745;"] {
+    background: linear-gradient(90deg, #28a745 0%, #43e97b 100%) !important;
+}
+
+.edit-btn[style*="background:#28a745;"]:hover {
+    background: linear-gradient(90deg, #218838 0%, #43e97b 100%) !important;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #888;
+    font-size: 1.2em;
+    margin-top: 32px;
+}
+
+.edit-form input[type="number"] {
+    width: 60px;
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #bcd0ee;
+    font-size: 1em;
+    margin-right: 8px;
+    background: #f7faff;
+}
+
+.edit-form select {
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #bcd0ee;
+    font-size: 1em;
+    margin-right: 8px;
+    background: #f7faff;
+}
+
+.edit-form input[type="text"] {
+    width: 90px;
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #bcd0ee;
+    font-size: 1em;
+    margin-right: 8px;
+    background: #f7faff;
+}
+
+form[action="index.php"] button {
+    background: linear-gradient(90deg, #007bff 0%, #28a745 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, transform 0.2s;
+}
+
+form[action="index.php"] button:hover {
+    background: linear-gradient(90deg, #0056b3 0%, #218838 100%);
+    transform: translateY(-2px) scale(1.03);
+}<!-- Example Add to Cart form -->
+<form class="add-to-cart-form">
+    <input type="hidden" name="product_id" value="PRODUCT_ID">
+    <input type="hidden" name="product_name" value="PRODUCT_NAME">
+    <input type="hidden" name="product_price" value="PRODUCT_PRICE">
+    <input type="number" name="quantity" value="1" min="1">
+    <!-- Add size if needed -->
+    <button type="submit">Add to Cart</button>
+</form>
